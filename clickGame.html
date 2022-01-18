@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click game</title>
+
+    <link rel="stylesheet" href="main.css" />
+    <script src="app.js" defer></script>
+    <script src="clickGame.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="click/favicon.ico">
+</head>
+
+<body class="coolBackground">
+    <form>
+        <input type="button" value="Go back!" class="back" onclick="history.back()">
+    </form>
+
+    <br>
+    <br>
+    <h1>Klick zum Starten auf den gelben Knopf!</h1>
+    <button class="start" onclick="clickGameStart()">Start</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="clickElements">
+        <h1 id="ClickCounter" class="counter"></h1>
+        <button type="button" class="clickButton" onclick="incrementCount()" id="stretcher">Klick hier...</button>
+        <img src="Bilder/city.svg" class="ClickBg" id="img1" style: "width=pictureSize">
+    </div>
+
+    <script>
+        var count = 0;
+        var start = false;
+        const stre = document.querySelector('#stretcher');
+        let pictureSize = 10;
+
+        stre.addEventListener('click', () => {
+            if (start == true) {
+                pictureSize = pictureSize + 1;
+                document.getElementById("img1").width = pictureSize;
+            }
+        });
+
+        function clickGameStart() {
+            count = 0;
+            pictureSize = 10;
+            start = true;
+            document.getElementById("ClickCounter").innerHTML = count;
+            document.getElementById("clickButton").style.width = pictureSize;
+        }
+
+        function incrementCount() {
+            if (start == true) {
+                count++;
+                document.getElementById("ClickCounter").innerHTML = count + " mal geklicked, weiter so!";
+                pictureSize = pictureSize + 2;
+                document.getElementById("ClickButton").style.width = pictureSize;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

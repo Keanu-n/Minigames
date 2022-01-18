@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic tac toe</title>
+
+    <link rel="stylesheet" href="main.css" />
+    <script src="app.js" defer></script>
+    <script src="clickGame.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="ticTacToe/favicon.ico">
+</head>
+
+<body class="dark-theme">
+    <form>
+        <input type="button" value="Go back!" class="back" onclick="history.back()">
+    </form>
+
+    <br>
+    <br>
+    <h1>Klick zum Starten auf den gelben Knopf!</h1>
+    <button id="aaaaah" class="start" onclick="ticTacToe_start()">Start</button>
+
+    <br>
+    <br>
+    <h1 id="gewinnen1" class="win"></h1>
+
+    <div class="tic_btn">
+        <button class="one" id="one2" onclick="one()"></button>
+        <button class="two" id="two2" onclick="two()"></button>
+        <button class="three" id="three2" onclick="three()"></button>
+        <button class="four" id="four2" onclick="four()"></button>
+        <button class="five" id="five2" onclick="five()"></button>
+        <button class="six" id="six2" onclick="six()"></button>
+        <button class="seven" id="seven2" onclick="seven()"></button>
+        <button class="eight" id="eight2" onclick="eight()"></button>
+        <button class="nine" id="nine2" onclick="nine()"></button>
+    </div>
+    
+    <audio id = "audio1" loop autoplay>
+        <source src= "Audio/Funky-Chase.mp3"> 
+    </audio>
+    <script> audio1.playbackRate = 10 </script>
+
+</body>
