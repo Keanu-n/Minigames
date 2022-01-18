@@ -1,6 +1,6 @@
 # WebProject
 
-Link: https://keanu-n.github.io/Minigames-WebProject/
+Link: https://keanu-n.github.io/Minigames/
 
 ## Ziel
 
