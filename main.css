@@ -36,6 +36,10 @@ body {
     --btnFontColor: var(--black);
 }
 
+.dunkle-schrift{
+    color: var(--grey);
+}
+
 
 /* aussehen der navbar */
 
